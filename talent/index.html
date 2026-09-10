@@ -895,6 +895,8 @@
     if(!window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
 
+    var REVEAL_SELECTOR='.sec-head,.marquee-sec,.pcard,.stat,.evolve-col,.ai-stat,.ai-response li,.eco-tier,.sol,.chip,.pool,.layer,.gcard,.final .eyebrow,.final h2,.final p,.final .cta-row,.final .micro';
+
     gsap.utils.toArray('.sec-head').forEach(function(el){
       gsap.from(el,{opacity:0,y:24,duration:.75,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});
     });
@@ -913,6 +915,28 @@
     gsap.from('.layer',{opacity:0,x:-20,duration:.6,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.pyramid',start:'top 85%',once:true}});
     gsap.from('.gcard',{opacity:0,y:24,duration:.65,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.guar-grid',start:'top 82%',once:true}});
     gsap.from('.final .eyebrow,.final h2,.final p,.final .cta-row,.final .micro',{opacity:0,y:22,duration:.7,ease:'power3.out',stagger:.08,scrollTrigger:{trigger:'.final',start:'top 85%',once:true}});
+
+    /* Web fonts (loaded async via Google Fonts) can reflow text
+       height AFTER these trigger positions are first calculated,
+       which can leave a trigger's start point miscalculated and its
+       reveal never fires — the content stays at opacity:0 forever.
+       Recalculate once fonts, then the full page (images included),
+       have actually settled. */
+    function refresh(){ ScrollTrigger.refresh(); }
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+    window.addEventListener('load', refresh);
+
+    /* Hard safety net regardless of cause: scroll-revealed content
+       must never stay permanently invisible. Anything this system
+       hid that is still hidden a few seconds in gets force-shown. */
+    setTimeout(function(){
+      document.querySelectorAll(REVEAL_SELECTOR).forEach(function(el){
+        if(getComputedStyle(el).opacity==='0'){
+          gsap.killTweensOf(el);
+          gsap.set(el,{clearProps:'all'});
+        }
+      });
+    },4000);
   })();
 </script>
 </body>

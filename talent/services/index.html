@@ -83,6 +83,27 @@
   @media(max-width:560px){.acc-inner{padding-left:0}.acc-label{font-size:17px}}
 
   /* ============================================================
+     EVOLUTION — Carried Forward / Newly Engineered, applied to
+     Talent Services specifically. Same device as the homepage's
+     Pyramid Evolution section: states the trust claim and the
+     transformation claim side by side, never one without the other.
+     ============================================================ */
+  .evo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+  .evo-col{border:1px solid var(--line);border-radius:16px;padding:32px 30px 28px;background:var(--paper);position:relative;overflow:hidden}
+  .evo-col:before{content:"";position:absolute;left:0;top:0;height:3px;width:100%}
+  .evo-then:before{background:linear-gradient(90deg,var(--ink-2),transparent)}
+  .evo-now:before{background:var(--grad)}
+  .evo-label{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .evo-col h3{font-size:19px;margin:10px 0 18px}
+  .evo-col ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .evo-col li{position:relative;padding-left:24px;font-size:14.2px;color:#3A4661;line-height:1.55}
+  .evo-then li:before{content:"";position:absolute;left:0;top:7px;width:8px;height:8px;border-radius:50%;background:var(--ink-2)}
+  .evo-now li:before{content:"";position:absolute;left:0;top:7px;width:8px;height:8px;border-radius:2px;background:var(--blue);transform:rotate(45deg)}
+  .evo-col li b{color:var(--ink);font-weight:600}
+  .evo-quote{margin-top:36px;text-align:center;font-family:var(--display);font-weight:600;font-size:clamp(18px,2.2vw,24px);color:var(--ink);letter-spacing:-.015em}
+  @media(max-width:800px){.evo-grid{grid-template-columns:1fr}}
+
+  /* ============================================================
      ENGAGEMENT MODELS — icon card row with dividers
      ============================================================ */
   .eng-cards{margin-top:48px;border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:repeat(5,1fr);background:var(--paper);overflow:hidden}
@@ -269,7 +290,8 @@
 
   /* Unified, larger heading scale for this page's own sections,
      closer to the reference's dramatic type without leaving Inter. */
-  #stats h2, #domains .sec-head h2, #engagement-models .sec-head h2,
+  #stats h2, #domains .sec-head h2, #evolution .sec-head h2,
+  #engagement-models .sec-head h2,
   #global-workforce-teaser .sec-head h2, .outc-head h2,
   #testimonial .sec-head h2, #explore h2, #insights .sec-head h2,
   .faqx-intro h2{
@@ -372,7 +394,7 @@
   <div class="phero-content">
     <div class="phero-crumb"><a href="/talent">Talent</a><span>/</span><span class="here">Talent Services</span></div>
     <h1 class="phero-heading">Specialized talent, owned end to end.</h1>
-    <p class="phero-lead">One partner across IT, Non-IT, Federal, and Healthcare staffing, deployed through the engagement model your mandate actually needs.</p>
+    <p class="phero-lead">Thirty years of accountable staffing, re-engineered for how enterprises source talent now: across IT, Non-IT, Federal, and Healthcare, deployed through the model your mandate actually needs.</p>
     <div class="phero-btns">
       <a class="btn btn-frost" href="#engagement-models">Explore Engagement Models
         <svg width="16" height="16" fill="none" viewBox="0 0 17 17"><path d="M3.5 8.5h10M9.5 5l4 3.5L9.5 12" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -407,7 +429,7 @@
         <div class="stat-desc">Candidates cleared through validation before reaching you</div>
       </div>
     </div>
-    <div class="stat-note">Every engagement carries a named owner accountable for sourcing, vetting, and delivery, backed by specialists who work inside IT, Federal, and Healthcare rather than generalist recruiters learning the domain on your requisition.</div>
+    <div class="stat-note">Every engagement is run by one accountable specialist, the discipline that has carried Pyramid for thirty years, now paired with Hoonr&trade;-assisted sourcing so that accountability moves as fast as the market does.</div>
   </div>
 </section>
 
@@ -495,6 +517,42 @@
 </section>
 
 <!-- ============================================================
+     3B. EVOLUTION — Carried Forward / Newly Engineered
+     ============================================================ -->
+<section class="block" id="evolution" style="background:var(--surface)">
+  <div class="pw">
+    <div class="sec-head sec-head--center" style="max-width:72ch;margin-left:auto;margin-right:auto;text-align:center">
+      <div class="eyebrow">Evolving the Talent Pillar</div>
+      <h2>Everything about how we staff is evolving. <span class="accent">The accountability underneath it isn't.</span></h2>
+      <p>Talent Services engineers Pyramid's Talent Capital: skills-first, context-matched sourcing, not keyword matching. What's changed is how we build that talent bench. What hasn't is who answers for it.</p>
+    </div>
+    <div class="evo-grid">
+      <div class="evo-col evo-then">
+        <div class="evo-label">Carried Forward</div>
+        <h3>What thirty years of staffing discipline already proved.</h3>
+        <ul>
+          <li><b>Domain specialists, not generalists.</b> Fluent inside IT, Federal, and Healthcare, not learning the domain on your requisition.</li>
+          <li><b>One accountable owner, every engagement.</b> Executive-accessible, named from day one.</li>
+          <li><b>SLA-backed timelines and remediation.</b> Documented commitments, not implied ones.</li>
+          <li><b>Retention-first matching.</b> Built to reduce re-hiring, not just fill a requisition fast.</li>
+        </ul>
+      </div>
+      <div class="evo-col evo-now">
+        <div class="evo-label">Newly Engineered</div>
+        <h3>What's actually new about how we deliver it.</h3>
+        <ul>
+          <li><b>Hoonr&trade; orchestration.</b> Sourcing that reads role context, not just keywords, and tightens with every placement.</li>
+          <li><b>Teams as a Service.</b> Full, pre-validated delivery pods, sourced and staffed as a unit, not one hire at a time.</li>
+          <li><b>AI Builders access.</b> An invitation-grade pipeline into frontier AI and engineering talent.</li>
+          <li><b>Five engagement models, one bench.</b> Flex the model to the mandate without re-sourcing from scratch.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="evo-quote">"Everything is evolving. Trust isn't."</p>
+  </div>
+</section>
+
+<!-- ============================================================
      4. ENGAGEMENT MODELS
      ============================================================ -->
 <section class="block" id="engagement-models" style="background:var(--surface)">
@@ -502,9 +560,16 @@
     <div class="sec-head">
       <div class="eyebrow">Engagement Models</div>
       <h2>Flex the model to the mandate, not the other way around.</h2>
-      <p>Five ways to deploy the same validated talent bench, chosen by how fast you need to move and how much control you want to retain.</p>
+      <p>Pyramid doesn't stop at individual placements. From a full delivery pod to a single specialist, five ways to deploy the same validated bench, chosen by how fast you need to move and how much control you want to retain.</p>
     </div>
     <div class="eng-cards">
+      <div class="eng-card">
+        <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 20c0-3 2.5-5 5-5s5 2 5 5M12 20c0-3 2.5-5 5-5s5 2 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="tag">Full Pods</div>
+        <h3>Teams as a Service</h3>
+        <p>Full, pre-validated delivery pods, sourced and staffed by us as a single unit, not one hire at a time.</p>
+        <a class="link" href="/talent/services/teams-as-a-service">Learn more →</a>
+      </div>
       <div class="eng-card">
         <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
         <div class="tag">Speed</div>
@@ -523,7 +588,7 @@
         <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 15 9l7 .6-5.3 4.6L18.2 21 12 17l-6.2 4 1.5-6.8L2 9.6 9 9z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
         <div class="tag">Permanence</div>
         <h3>Direct Hire</h3>
-        <p>Domain-calibrated search and validation for roles built to stay.</p>
+        <p>Domain-calibrated search and validation, built for retention, not just a fast close.</p>
         <a class="link" href="/talent/services/direct-hire">Learn more →</a>
       </div>
       <div class="eng-card">
@@ -532,13 +597,6 @@
         <h3>Payrolling (EOR)</h3>
         <p>Compliant employment of record in markets where you don't have an entity yet.</p>
         <a class="link" href="/talent/services/payrolling-eor">Learn more →</a>
-      </div>
-      <div class="eng-card">
-        <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 20c0-3 2.5-5 5-5s5 2 5 5M12 20c0-3 2.5-5 5-5s5 2 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div class="tag">Full Pods</div>
-        <h3>Teams as a Service</h3>
-        <p>Pre-validated, fully staffed delivery pods, coordinated by us end to end.</p>
-        <a class="link" href="/talent/services/teams-as-a-service">Learn more →</a>
       </div>
     </div>
   </div>
@@ -619,12 +677,12 @@
     <div class="outc-grid">
       <div class="outc-head">
         <div class="eyebrow">Why Choose Us</div>
-        <h2>What a named owner and a validated bench actually change.</h2>
-        <p>The differentiators that show up in time-to-fill, retention, and how a program feels to run.</p>
+        <h2>What one accountable specialist and a validated bench actually change.</h2>
+        <p>Built for technology and operations leaders (CIO, CTO, COO) who need speed without losing domain fluency, for finance and procurement teams tracking total cost of ownership, and for people leaders accountable for retention once the placement lands.</p>
       </div>
       <div class="outc-card outc-1" data-stat-card>
         <div class="outc-num"><span class="stat-num" data-target="1">0</span></div>
-        <p>Named owner, accountable for every engagement, end to end.</p>
+        <p>One accountable specialist, named on every engagement, start to finish.</p>
         <div class="outc-arrow"><svg viewBox="0 0 18 18" fill="none"><path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
       <div class="outc-card outc-2" data-stat-card>
@@ -643,7 +701,7 @@
         <div class="outc-arrow"><svg viewBox="0 0 18 18" fill="none"><path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
     </div>
-    <p class="outc-foot">Figures reflect current staffing-industry benchmarks for skills-first delivery, shown as directional ranges. To be replaced with Pyramid Talent's own verified engagement data before publish.</p>
+    <p class="outc-foot">Figures reflect current staffing-industry benchmarks for skills-first, domain-matched delivery, shown as directional ranges. To be replaced with Pyramid Talent's own verified engagement data and named sources before publish.</p>
   </div>
 </section>
 
@@ -669,9 +727,9 @@
         </div>
       </div>
       <div class="test-right">
-        <div class="test-res-label">Illustrative Results</div>
+        <div class="test-res-label">Illustrative Engagement Metrics</div>
         <div class="test-res-item"><div class="test-dot"></div><span class="test-res-text">Faster time-to-shortlist across both domains</span></div>
-        <div class="test-res-item"><div class="test-dot"></div><span class="test-res-text">One named owner throughout the engagement</span></div>
+        <div class="test-res-item"><div class="test-dot"></div><span class="test-res-text">Single accountable lead throughout the engagement</span></div>
         <div class="test-res-item" style="margin-bottom:0"><div class="test-dot"></div><span class="test-res-text">90-day retention above industry benchmark</span></div>
       </div>
     </div>
@@ -798,7 +856,7 @@
             <span class="faqx-q">What happens if a placement isn't the right fit?</span>
             <svg class="faqx-arrow" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faqx-body"><p>Remediation is SLA-backed and documented up front, not implied. If the fit isn't right, your named owner drives the resolution rather than leaving you to re-open the requisition on your own.</p></div>
+          <div class="faqx-body"><p>Remediation is SLA-backed and documented up front, not implied. If the fit isn't right, the specialist accountable for your engagement drives the resolution rather than leaving you to re-open the requisition on your own.</p></div>
         </div>
         <div class="faqx-item">
           <button class="faqx-trigger" onclick="faqxToggle(this)" aria-expanded="false">
@@ -844,6 +902,7 @@
       </div>
       <div class="foot-links">
         <a href="#domains">Staffing by Domain</a>
+        <a href="#evolution">Evolution</a>
         <a href="#engagement-models">Engagement Models</a>
         <a href="#global-workforce-teaser">Global Workforce</a>
         <a href="#why-choose-us">Why Choose Us</a>

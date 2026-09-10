@@ -242,6 +242,42 @@
   .final .cta-row{justify-content:center}
   .micro{margin-top:24px;font-size:13.5px;color:rgba(255,255,255,.6)}
 
+  /* TRUST & COMPLIANCE STRIP */
+  .badges-sec{padding:40px 0 0;border-bottom:1px solid var(--line);background:#fff}
+  .badges-sec .wrap h3{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:-.015em;margin-bottom:22px}
+  .badge-track{position:relative;overflow:hidden;padding-bottom:36px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .badge-scroll{display:flex;gap:14px;width:max-content;animation:badgescroll 36s linear infinite}
+  .badge-track:hover .badge-scroll{animation-play-state:paused}
+  @keyframes badgescroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.badge-scroll{animation:none}}
+  .badge-pill{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:11px 20px;font-size:13.5px;font-weight:600;color:#3A3654;white-space:nowrap}
+
+  /* INDUSTRIES WE SERVE */
+  .ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+  .ind-card{border:1px solid var(--line);border-radius:16px;padding:26px 24px;background:var(--paper);transition:.25s;position:relative;overflow:hidden}
+  .ind-card:before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--blue),transparent)}
+  .ind-card:hover{border-color:#D6C9F2;box-shadow:0 18px 40px -24px rgba(45,10,90,.35);transform:translateY(-3px)}
+  .ind-card h4{font-size:18px;margin-bottom:10px}
+  .ind-card p{font-size:14px;color:var(--muted);line-height:1.6}
+  @media(max-width:900px){.ind-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.ind-grid{grid-template-columns:1fr}}
+
+  /* BUILT FOR EVERY BUYER — persona accordion */
+  .persona-acc{max-width:840px;margin:48px auto 0}
+  .acc-item{border-bottom:1px solid rgba(255,255,255,.14)}
+  .acc-item:first-child{border-top:1px solid rgba(255,255,255,.14)}
+  .acc-btn{width:100%;display:flex;align-items:center;gap:20px;padding:24px 0;background:none;border:none;cursor:pointer;text-align:left}
+  .acc-iconbox{width:44px;height:44px;flex-shrink:0;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:13px;color:var(--accent-lt);transition:.3s}
+  .acc-item.is-open .acc-iconbox{background:var(--blue);border-color:var(--blue);color:#fff}
+  .acc-role{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-lt);display:block;margin-bottom:4px}
+  .acc-label{font-size:18px;font-weight:600;color:#fff;letter-spacing:-.01em;flex:1}
+  .acc-chev{flex-shrink:0;color:rgba(255,255,255,.5);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+  .acc-item.is-open .acc-chev{transform:rotate(180deg);color:var(--accent-lt)}
+  .acc-body{overflow:hidden;height:0}
+  .acc-inner{padding:0 0 24px 64px}
+  .acc-inner p{font-size:14.5px;color:rgba(255,255,255,.72);line-height:1.65}
+  @media(max-width:560px){.acc-inner{padding-left:0}.acc-label{font-size:16px}}
+
 </style>
 </head>
 <body>
@@ -401,6 +437,46 @@
       <a class="story g2" href="#" aria-hidden="true"><span class="cat">Trust</span><h4>GCC &amp; BOT: capability centers built on governance, not just delivery</h4><span class="more">Read &rarr;</span></a>
       <a class="story g3" href="#" aria-hidden="true"><span class="cat">Talent</span><h4>Bestshoring 2026: right talent, right location, right cost structure</h4><span class="more">Read &rarr;</span></a>
       <a class="story g4" href="#" aria-hidden="true"><span class="cat">Trust</span><h4>The roles that never reach a public board, and the partner who holds them</h4><span class="more">Read &rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2B. TRUST & COMPLIANCE STRIP
+     ============================================================ -->
+<section class="badges-sec" id="trust">
+  <div class="wrap">
+    <h3>Built for the domains and compliance standards enterprises already <span class="grad-text">trust.</span></h3>
+  </div>
+  <div class="badge-track">
+    <div class="badge-scroll">
+      <span class="badge-pill">IT Staffing</span>
+      <span class="badge-pill">Non-IT Staffing</span>
+      <span class="badge-pill">Federal Staffing</span>
+      <span class="badge-pill">Healthcare</span>
+      <span class="badge-pill">Guidewire Center of Excellence</span>
+      <span class="badge-pill">Federal Compliance-Ready</span>
+      <span class="badge-pill">Staff Augmentation</span>
+      <span class="badge-pill">Contract-to-Hire</span>
+      <span class="badge-pill">Direct Hire</span>
+      <span class="badge-pill">Payrolling / EOR</span>
+      <span class="badge-pill">Teams as a Service</span>
+      <span class="badge-pill">GCC &amp; BOT Delivery</span>
+      <span class="badge-pill">AI Builders: 3-Stage Validated</span>
+      <!-- duplicate for seamless loop -->
+      <span class="badge-pill" aria-hidden="true">IT Staffing</span>
+      <span class="badge-pill" aria-hidden="true">Non-IT Staffing</span>
+      <span class="badge-pill" aria-hidden="true">Federal Staffing</span>
+      <span class="badge-pill" aria-hidden="true">Healthcare</span>
+      <span class="badge-pill" aria-hidden="true">Guidewire Center of Excellence</span>
+      <span class="badge-pill" aria-hidden="true">Federal Compliance-Ready</span>
+      <span class="badge-pill" aria-hidden="true">Staff Augmentation</span>
+      <span class="badge-pill" aria-hidden="true">Contract-to-Hire</span>
+      <span class="badge-pill" aria-hidden="true">Direct Hire</span>
+      <span class="badge-pill" aria-hidden="true">Payrolling / EOR</span>
+      <span class="badge-pill" aria-hidden="true">Teams as a Service</span>
+      <span class="badge-pill" aria-hidden="true">GCC &amp; BOT Delivery</span>
+      <span class="badge-pill" aria-hidden="true">AI Builders: 3-Stage Validated</span>
     </div>
   </div>
 </section>
@@ -642,6 +718,45 @@
 </section>
 
 <!-- ============================================================
+     5B. INDUSTRIES WE SERVE
+     ============================================================ -->
+<section class="block" id="industries" style="background:var(--surface)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Where We Deliver</div>
+      <h2>Domain depth, wherever the mandate lives.</h2>
+      <p>Specialists fluent inside the industries enterprises actually operate in, not a generalist bench stretched thin across all of them.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card">
+        <h4>Technology</h4>
+        <p>Engineering, cloud, and platform talent matched on stack and context, not a keyword list.</p>
+      </div>
+      <div class="ind-card">
+        <h4>Banking &amp; Financial Services</h4>
+        <p>Compliance-fluent talent for regulated environments, vetted before they reach your desk.</p>
+      </div>
+      <div class="ind-card">
+        <h4>Healthcare</h4>
+        <p>Clinical and allied staffing delivered through the Pyramid Consulting Healthcare team.</p>
+      </div>
+      <div class="ind-card">
+        <h4>Insurance</h4>
+        <p>Guidewire Center of Excellence expertise for policy, claims, and billing platform programs.</p>
+      </div>
+      <div class="ind-card">
+        <h4>Manufacturing</h4>
+        <p>Engineering and operations talent for plant-floor and supply-chain programs.</p>
+      </div>
+      <div class="ind-card">
+        <h4>Life Sciences</h4>
+        <p>Regulated-environment specialists fluent in validation, documentation, and audit trails.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      6. AI BUILDERS — top-tier talent, validated in advance
      ============================================================ -->
 <section class="block builders" id="builders">
@@ -742,6 +857,57 @@
 </section>
 
 <!-- ============================================================
+     8B. BUILT FOR EVERY BUYER — persona FAQ accordion
+     ============================================================ -->
+<section class="block" id="buyers" style="background:linear-gradient(180deg,var(--ink) 0%,var(--ink-2) 100%);border-bottom:none">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div class="eyebrow on-dark">Built for Every Buyer</div>
+      <h2 style="color:#fff">Three buyers. The question each one asks first.</h2>
+      <p style="color:rgba(255,255,255,.72)">Exactly three buyer personas shape every engagement: Technology &amp; Operations, Finance &amp; Procurement, and People Leaders.</p>
+    </div>
+    <div class="persona-acc">
+      <div class="acc-item is-open">
+        <button class="acc-btn" onclick="personaToggle(this)" aria-expanded="true">
+          <div class="acc-iconbox">01</div>
+          <span class="acc-label"><span class="acc-role">CIO, CTO &amp; COO</span>How fast can you move without losing quality?</span>
+          <svg class="acc-chev" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p>Hoonr™-assisted sourcing compresses time-to-shortlist versus keyword search, and Teams as a Service deploys pre-validated pods, so speed doesn't mean assembling the team yourself.</p>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" onclick="personaToggle(this)" aria-expanded="false">
+          <div class="acc-iconbox">02</div>
+          <span class="acc-label"><span class="acc-role">CFO &amp; Procurement</span>How do we model total cost, not just a bill rate?</span>
+          <svg class="acc-chev" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p>One accountable owner and radical transparency into pipeline and spend let you forecast total cost of ownership, not just react to invoices.</p>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" onclick="personaToggle(this)" aria-expanded="false">
+          <div class="acc-iconbox">03</div>
+          <span class="acc-label"><span class="acc-role">CHRO &amp; People Leaders</span>Will this hire stick around?</span>
+          <svg class="acc-chev" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p>Retention-first matching on capability, domain, and working style is built into the search itself, not bolted on after placement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      9. FINAL CTA — the three-verb bookend
      ============================================================ -->
 <section class="final" id="final">
@@ -772,9 +938,11 @@
         <a href="#evolution">Evolution</a>
         <a href="#ai-age">Age of AI</a>
         <a href="#solutions">Solutions</a>
+        <a href="#industries">Industries</a>
         <a href="#engine">Hoonr™</a>
         <a href="#philosophy">Philosophy</a>
         <a href="#accountability">Accountability</a>
+        <a href="#buyers">Built for Every Buyer</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -886,6 +1054,42 @@
     })();
   })();
 
+  /* ── "Built for Every Buyer" persona accordion (single-open) ── */
+  function personaToggle(btn){
+    var item=btn.parentElement, body=item.querySelector('.acc-body');
+    var isOpen=btn.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('#buyers .acc-item').forEach(function(it){
+      if(it===item) return;
+      var b=it.querySelector('.acc-btn'), bd=it.querySelector('.acc-body');
+      if(b.getAttribute('aria-expanded')==='true'){
+        b.setAttribute('aria-expanded','false');
+        it.classList.remove('is-open');
+        if(window.gsap) gsap.to(bd,{height:0,duration:.4,ease:'power3.inOut'});
+        else bd.style.height='0px';
+      }
+    });
+    if(isOpen){
+      btn.setAttribute('aria-expanded','false');
+      item.classList.remove('is-open');
+      if(window.gsap) gsap.to(body,{height:0,duration:.4,ease:'power3.inOut'});
+      else body.style.height='0px';
+    }else{
+      btn.setAttribute('aria-expanded','true');
+      item.classList.add('is-open');
+      if(window.gsap){
+        gsap.set(body,{height:'auto'});
+        var h=body.offsetHeight;
+        gsap.fromTo(body,{height:0},{height:h,duration:.45,ease:'power3.inOut'});
+      }else{
+        body.style.height='auto';
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    var first=document.querySelector('#buyers .acc-item.is-open .acc-body');
+    if(first){ if(window.gsap){ gsap.set(first,{height:'auto'}); } else { first.style.height='auto'; } }
+  });
+
   /* ── Scroll-reveal system ──
      Same restrained fade + rise treatment throughout: opacity 0,
      y 20-30px, power3.out, ~0.6-1s, staggered where a section has
@@ -895,13 +1099,14 @@
     if(!window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
 
-    var REVEAL_SELECTOR='.sec-head,.marquee-sec,.pcard,.stat,.evolve-col,.ai-stat,.ai-response li,.eco-tier,.sol,.chip,.pool,.layer,.gcard,.final .eyebrow,.final h2,.final p,.final .cta-row,.final .micro';
+    var REVEAL_SELECTOR='.sec-head,.marquee-sec,.badges-sec,.pcard,.stat,.evolve-col,.ai-stat,.ai-response li,.eco-tier,.sol,.ind-card,.chip,.pool,.layer,.gcard,#buyers .acc-item,.final .eyebrow,.final h2,.final p,.final .cta-row,.final .micro';
 
     gsap.utils.toArray('.sec-head').forEach(function(el){
       gsap.from(el,{opacity:0,y:24,duration:.75,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});
     });
 
     gsap.from('.marquee-sec',{opacity:0,y:30,duration:1,ease:'power3.out',scrollTrigger:{trigger:'.marquee-sec',start:'top 90%',once:true}});
+    gsap.from('.badges-sec',{opacity:0,y:24,duration:.8,ease:'power3.out',scrollTrigger:{trigger:'.badges-sec',start:'top 90%',once:true}});
 
     gsap.from('.pcard',{opacity:0,y:28,duration:.7,ease:'power3.out',stagger:.12,scrollTrigger:{trigger:'.matrix',start:'top 82%',once:true}});
     gsap.from('.stat',{opacity:0,y:22,duration:.6,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.stat-grid',start:'top 85%',once:true}});
@@ -910,10 +1115,12 @@
     gsap.from('.ai-response li',{opacity:0,y:16,duration:.55,ease:'power3.out',stagger:.09,scrollTrigger:{trigger:'.ai-response',start:'top 82%',once:true}});
     gsap.from('.eco-tier',{opacity:0,y:24,duration:.7,ease:'power3.out',stagger:.12,scrollTrigger:{trigger:'.eco-pyramid',start:'top 85%',once:true}});
     gsap.from('.sol',{opacity:0,y:28,duration:.75,ease:'power3.out',stagger:.13,scrollTrigger:{trigger:'.sol-grid',start:'top 82%',once:true}});
+    gsap.from('.ind-card',{opacity:0,y:26,duration:.65,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.ind-grid',start:'top 82%',once:true}});
     gsap.from('.chip',{opacity:0,y:14,duration:.5,ease:'power3.out',stagger:.07,scrollTrigger:{trigger:'.chips',start:'top 88%',once:true}});
     gsap.from('.pool',{opacity:0,y:22,duration:.6,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.pools',start:'top 85%',once:true}});
     gsap.from('.layer',{opacity:0,x:-20,duration:.6,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.pyramid',start:'top 85%',once:true}});
     gsap.from('.gcard',{opacity:0,y:24,duration:.65,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.guar-grid',start:'top 82%',once:true}});
+    gsap.from('#buyers .acc-item',{opacity:0,y:20,duration:.6,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.persona-acc',start:'top 85%',once:true}});
     gsap.from('.final .eyebrow,.final h2,.final p,.final .cta-row,.final .micro',{opacity:0,y:22,duration:.7,ease:'power3.out',stagger:.08,scrollTrigger:{trigger:'.final',start:'top 85%',once:true}});
 
     /* Web fonts (loaded async via Google Fonts) can reflow text

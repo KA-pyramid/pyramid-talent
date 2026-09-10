@@ -33,15 +33,20 @@
   /* HEADER */
   header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s ease}
   .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand{display:flex;flex-direction:column;gap:3px;line-height:1;color:#fff}
-  .logo-word{display:inline-flex;align-items:center;gap:5px;font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.02em}
-  .logo-word .tri{width:14px;height:14px;flex:none;color:inherit;transform:translateY(-2px)}
-  .logo-sub{font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:.42em;color:inherit}
+  /* Brand lockup: "pyramid" wordmark with the gold roof mark floating
+     above it, "TALENT" beneath. The wordmark and subtext swap between
+     white (unscrolled, over the dark hero) and ink (scrolled, white
+     header) via color:inherit, same mechanism as before; the roof
+     mark keeps its fixed brand gold in both states, since gold reads
+     clearly on both a dark hero and a white scrolled header. */
+  .brand{position:relative;display:flex;flex-direction:column;line-height:1;color:#fff}
+  .logo-word{position:relative;display:inline-block;font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:-.02em}
+  .logo-word .tri{position:absolute;top:-13px;right:-5px;width:27px;height:19px;flex:none;pointer-events:none}
+  .logo-sub{display:block;margin-top:5px;font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:.42em;color:inherit;opacity:.62}
   .nav-cta{font-family:var(--body);font-weight:600;font-size:14px;padding:11px 20px;border-radius:8px;background:#fff;color:var(--ink);transition:.2s;white-space:nowrap}
   .nav-cta:hover{transform:translateY(-1px)}
   header.scrolled{background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   header.scrolled .brand{color:var(--ink)}
-  header.scrolled .logo-word .tri{color:var(--blue)}
   header.scrolled .nav-cta{background:var(--grad);color:#fff}
 
   /* dropdown nav */

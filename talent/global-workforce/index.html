@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talent Services | Pyramid Talent</title>
+<title>Global Workforce Solutions | Pyramid Talent</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
   @media(max-width:560px){.stats-grid{grid-template-columns:1fr}.stat-col{border-right:none!important;border-bottom:1px solid var(--line)}.stat-col:last-child{border-bottom:none}}
 
   /* ============================================================
-     STAFFING BY DOMAIN — image panel + accordion
+     DELIVERY MODELS — visual panel + accordion (GCC / BOT / Bestshoring)
      ============================================================ */
   .dom-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch;margin-top:48px}
   .dom-visual{position:relative;border-radius:18px;overflow:hidden;min-height:380px;padding:2px;
@@ -57,10 +57,10 @@
     background:radial-gradient(120% 100% at 30% 20%, rgba(124,58,237,.55), transparent 62%),linear-gradient(160deg,#1C1145 0%,#0D1127 100%);
     display:flex;align-items:center;justify-content:center;padding:34px}
   .dom-visual-in:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px);background-size:16px 16px;opacity:.5}
-  .dom-badges{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:340px}
-  .dom-badge{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);border-radius:13px;padding:20px 16px;text-align:center}
-  .dom-badge svg{width:26px;height:26px;color:var(--accent-lt)}
-  .dom-badge span{display:block;margin-top:10px;font-size:12.5px;font-weight:600;color:#fff}
+  .dom-badges{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:16px;width:100%;max-width:320px}
+  .dom-badge{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);border-radius:13px;padding:18px 20px;text-align:left;display:flex;align-items:center;gap:14px}
+  .dom-badge svg{width:26px;height:26px;color:var(--accent-lt);flex-shrink:0}
+  .dom-badge span{display:block;font-size:13.5px;font-weight:600;color:#fff}
   .dom-acc{display:flex;flex-direction:column;justify-content:center}
   .acc-item{border-bottom:1px solid var(--line)}
   .acc-item:first-child{border-top:1px solid var(--line)}
@@ -71,7 +71,6 @@
   .acc-item.is-open .acc-iconbox svg{color:var(--blue)}
   .acc-label{font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.01em;flex:1}
   .acc-item.is-open .acc-label{color:var(--blue)}
-  .acc-tag{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:8px}
   .acc-chev{flex-shrink:0;color:var(--muted);transition:transform .4s cubic-bezier(.4,0,.2,1)}
   .acc-item.is-open .acc-chev{transform:rotate(180deg);color:var(--blue)}
   .acc-body{overflow:hidden;height:0}
@@ -84,9 +83,7 @@
 
   /* ============================================================
      EVOLUTION — Carried Forward / Newly Engineered, applied to
-     Talent Services specifically. Same device as the homepage's
-     Pyramid Evolution section: states the trust claim and the
-     transformation claim side by side, never one without the other.
+     global delivery specifically.
      ============================================================ */
   .evo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
   .evo-col{border:1px solid var(--line);border-radius:16px;padding:32px 30px 28px;background:var(--paper);position:relative;overflow:hidden}
@@ -104,9 +101,9 @@
   @media(max-width:800px){.evo-grid{grid-template-columns:1fr}}
 
   /* ============================================================
-     ENGAGEMENT MODELS — icon card row with dividers
+     WHY MANAGED DELIVERY — icon card row with dividers
      ============================================================ */
-  .eng-cards{margin-top:48px;border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:repeat(5,1fr);background:var(--paper);overflow:hidden}
+  .eng-cards{margin-top:48px;border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:repeat(4,1fr);background:var(--paper);overflow:hidden}
   .eng-card{padding:34px 24px;position:relative}
   .eng-card:not(:last-child):after{content:"";position:absolute;right:0;top:16px;bottom:16px;width:1px;background:var(--line)}
   .eng-iconbox{width:52px;height:52px;border-radius:11px;background:var(--ink);display:flex;align-items:center;justify-content:center;
@@ -115,32 +112,29 @@
   .eng-card .tag{margin-top:20px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
   .eng-card h3{font-size:17px;margin:8px 0 10px;letter-spacing:-.01em}
   .eng-card p{font-size:13.5px;color:var(--muted);line-height:1.6}
-  .eng-card .link{margin-top:14px;display:inline-block;font-size:13px;font-weight:600;color:var(--blue)}
-  .eng-card .link:hover{text-decoration:underline}
-  @media(max-width:1080px){.eng-cards{grid-template-columns:repeat(3,1fr)}.eng-card:nth-child(3):after{display:none}}
-  @media(max-width:700px){.eng-cards{grid-template-columns:1fr 1fr}.eng-card:after{display:none!important}.eng-card{border-bottom:1px solid var(--line)}}
-  @media(max-width:480px){.eng-cards{grid-template-columns:1fr}}
+  @media(max-width:900px){.eng-cards{grid-template-columns:1fr 1fr}.eng-card:nth-child(2):after{display:none}}
+  @media(max-width:520px){.eng-cards{grid-template-columns:1fr}.eng-card:after{display:none!important}.eng-card{border-bottom:1px solid var(--line)}}
 
   /* ============================================================
-     GLOBAL WORKFORCE TEASER — 3 gradient "photo" cards
+     TALENT SERVICES TEASER — 3 gradient "photo" cards
      ============================================================ */
   .gws-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
-  .gws-card{position:relative;border-radius:18px;overflow:hidden;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:34px 30px;isolation:isolate}
+  .gws-card{position:relative;border-radius:18px;overflow:hidden;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;padding:34px 30px;isolation:isolate}
   .gws-card:before{content:"";position:absolute;inset:0;z-index:-2;background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1px);background-size:15px 15px;opacity:.5}
   .gws-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top, rgba(6,4,18,.85) 10%, rgba(6,4,18,.35) 55%, transparent)}
   .gws-g1{background:radial-gradient(85% 70% at 50% 74%, rgba(168,85,247,.7) 0%, rgba(109,40,217,.28) 48%, rgba(88,28,135,0) 72%),linear-gradient(155deg,#4a1288 0%,#340a61 52%,#210a40 100%)}
   .gws-g2{background:radial-gradient(90% 72% at 30% 24%, rgba(124,58,237,.55) 0%, transparent 58%),linear-gradient(160deg,#1C1145 0%,#0D1127 100%)}
   .gws-g3{background:radial-gradient(88% 70% at 62% 30%, rgba(196,181,253,.42) 0%, transparent 58%),linear-gradient(155deg,#2b1155 0%,#160a30 55%,#0d0620 100%)}
-  .gws-card h4{position:relative;z-index:2;font-family:var(--display);font-weight:700;font-size:24px;color:#fff;letter-spacing:-.015em}
-  .gws-card p{position:relative;z-index:2;margin-top:12px;font-size:15px;color:rgba(255,255,255,.82);line-height:1.6;max-width:30ch}
-  .gws-card .go{position:relative;z-index:2;margin-top:18px;display:inline-block;font-size:13px;font-weight:600;color:var(--accent-lt)}
+  .gws-card h4{position:relative;z-index:2;font-family:var(--display);font-weight:700;font-size:22px;color:#fff;letter-spacing:-.015em}
+  .gws-card p{position:relative;z-index:2;margin-top:12px;font-size:14.5px;color:rgba(255,255,255,.82);line-height:1.6;max-width:30ch}
+  .gws-card .go{position:relative;z-index:2;margin-top:16px;display:inline-block;font-size:13px;font-weight:600;color:var(--accent-lt)}
   .gws-more{margin-top:32px;text-align:center}
   .gws-more .link{font-weight:600;font-size:14.5px;color:var(--blue)}
   .gws-more .link:hover{text-decoration:underline}
   @media(max-width:840px){.gws-grid{grid-template-columns:1fr}}
 
   /* ============================================================
-     DOMAIN & COMPLIANCE BADGE MARQUEE
+     TRUST & LOCATIONS BADGE MARQUEE
      ============================================================ */
   .badges-sec{padding:40px 0 0;border-top:1px solid var(--line)}
   .badges-sec h3{font-size:21px;font-weight:700;color:var(--ink);letter-spacing:-.015em;margin-bottom:22px}
@@ -153,13 +147,6 @@
 
   /* ============================================================
      WHY CHOOSE US — asymmetric outcome bento grid
-     Matches the reference's actual mechanics: the whole grid is
-     bottom-anchored (align-items:end), each card gets an explicit
-     height (not stretched to fill), and only the heading opts out
-     with align-self:start. That combination is what makes the tall
-     cards visually "hang" past the heading and the short cards sit
-     flush at the bottom — a plain stretch/min-height grid can't
-     reproduce that same floating, uneven skyline.
      ============================================================ */
   .outc-grid{margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:end}
   .outc-head{grid-column:1 / 3;grid-row:1;align-self:start;margin-bottom:32px}
@@ -176,9 +163,6 @@
   .outc-3 .outc-arrow{border-color:rgba(13,17,39,.28)}
   .outc-arrow svg{width:16px;height:16px}
   .outc-foot{margin-top:26px;font-size:12px;color:var(--muted);line-height:1.7}
-  /* Tablet/mobile: reference drops the bento entirely for a flat,
-     equal-height 2x2 grid, heading full-width above — kept that
-     way down to phone widths rather than collapsing to 1 column. */
   @media(max-width:960px){
     .outc-grid{grid-template-columns:1fr 1fr;align-items:stretch}
     .outc-head{grid-column:1 / -1;grid-row:1;margin-bottom:12px}
@@ -281,18 +265,14 @@
   .ctab .btn-dark:hover{background:var(--blue-dk);transform:translateY(-1px)}
 
   /* ============================================================
-     WIDE SECTION WRAPPER — edge-to-edge gutters (like the
-     reference's 112px side padding) instead of the header/
-     footer's narrower, centered 1180px .wrap. Content sections
+     WIDE SECTION WRAPPER — edge-to-edge gutters, content sections
      only; header and footer keep the shared .wrap per README.
      ============================================================ */
   .pw{max-width:1440px;margin:0 auto;padding:0 clamp(24px,6vw,96px)}
 
-  /* Unified, larger heading scale for this page's own sections,
-     closer to the reference's dramatic type without leaving Inter. */
-  #stats h2, #domains .sec-head h2, #evolution .sec-head h2,
-  #engagement-models .sec-head h2,
-  #global-workforce-teaser .sec-head h2, .outc-head h2,
+  /* Unified, larger heading scale for this page's own sections. */
+  #stats h2, #delivery-models .sec-head h2, #evolution .sec-head h2,
+  #why-managed .sec-head h2, #talent-teaser .sec-head h2, .outc-head h2,
   #testimonial .sec-head h2, #explore h2, #insights .sec-head h2,
   .faqx-intro h2{
     font-size:clamp(30px,3.8vw,50px);
@@ -391,14 +371,14 @@
   <div class="phero-grid"></div>
   <div class="phero-gb"></div>
   <div class="phero-content">
-    <div class="phero-crumb"><a href="/talent">Talent</a><span>/</span><span class="here">Talent Services</span></div>
-    <h1 class="phero-heading">Specialized talent, owned end to end.</h1>
-    <p class="phero-lead">Thirty years of accountable staffing, re-engineered for how enterprises source talent now: across IT, Non-IT, Federal, and Healthcare, deployed through the model your mandate actually needs.</p>
+    <div class="phero-crumb"><a href="/talent">Talent</a><span>/</span><span class="here">Global Workforce Solutions</span></div>
+    <h1 class="phero-heading">Scale without surrendering control.</h1>
+    <p class="phero-lead">Thirty years of delivery discipline, re-engineered for global scale: Global Capability Centers, Build-Operate-Transfer, and Bestshoring, architected to the mandate, not a default geography.</p>
     <div class="phero-btns">
-      <a class="btn btn-frost" href="#engagement-models">Explore Engagement Models
+      <a class="btn btn-frost" href="#delivery-models">Explore Delivery Models
         <svg width="16" height="16" fill="none" viewBox="0 0 17 17"><path d="M3.5 8.5h10M9.5 5l4 3.5L9.5 12" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a class="btn btn-primary" href="/talent/contact-us">Talk to a Talent Strategist</a>
+      <a class="btn btn-primary" href="/talent/contact-us">Talk to a Workforce Strategist</a>
     </div>
   </div>
 </section>
@@ -409,47 +389,46 @@
 <section class="block stats-wrap" id="stats">
   <div class="pw">
     <div class="eyebrow">At a Glance</div>
-    <h2>One bench, deployed however the mandate requires.</h2>
+    <h2>One architecture, deployed wherever the mandate lives.</h2>
     <div class="stats-grid">
       <div class="stat-col">
-        <div class="stat-num">4</div>
-        <div class="stat-desc">Domains staffed: IT, Non-IT, Federal, Healthcare</div>
+        <div class="stat-num">3</div>
+        <div class="stat-desc">Delivery models: GCC, Build-Operate-Transfer, Bestshoring</div>
       </div>
       <div class="stat-col">
-        <div class="stat-num">5</div>
-        <div class="stat-desc">Engagement models, matched to the mandate</div>
+        <div class="stat-num">4</div>
+        <div class="stat-desc">Locations spanning the Americas and Asia, from Atlanta to Hyderabad</div>
       </div>
       <div class="stat-col">
         <div class="stat-num">1</div>
-        <div class="stat-desc">Named owner, accountable from day one</div>
+        <div class="stat-desc">Named owner, accountable for every engagement</div>
       </div>
       <div class="stat-col">
-        <div class="stat-num">100%</div>
-        <div class="stat-desc">Candidates cleared through validation before reaching you</div>
+        <div class="stat-num">30</div>
+        <div class="stat-desc">Years of delivery discipline behind every model</div>
       </div>
     </div>
-    <div class="stat-note">Every engagement is run by one accountable specialist, the discipline that has carried Pyramid for thirty years, now paired with Hoonr&trade;-assisted sourcing so that accountability moves as fast as the market does.</div>
+    <div class="stat-note">Global delivery is architected to the mandate, not defaulted to a geography: the same named-owner accountability that has carried Pyramid for thirty years, now applied at the scale of an entire delivery center.</div>
   </div>
 </section>
 
 <!-- ============================================================
-     3. STAFFING BY DOMAIN — visual + accordion
+     3. DELIVERY MODELS — visual + accordion (GCC / BOT / Bestshoring)
      ============================================================ -->
-<section class="block" id="domains">
+<section class="block" id="delivery-models">
   <div class="pw">
     <div class="sec-head">
-      <div class="eyebrow">Staffing by Domain</div>
-      <h2>Depth in the domains that don't forgive a generalist hire.</h2>
-      <p>Specialists who've delivered inside the domain, not recruiters learning it on your requisition.</p>
+      <div class="eyebrow">Delivery Models</div>
+      <h2>Three ways to stand up capability, chosen by how much control you want and when.</h2>
+      <p>Every model draws on the same governance discipline. What changes is how much of the operation you run yourself, and when.</p>
     </div>
     <div class="dom-grid">
       <div class="dom-visual">
         <div class="dom-visual-in">
           <div class="dom-badges">
-            <div class="dom-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M8 9 4 12 8 15M16 9l4 3-4 3M14 6l-4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>IT</span></div>
-            <div class="dom-badge"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.6"/></svg><span>Non-IT</span></div>
-            <div class="dom-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span>Federal</span></div>
-            <div class="dom-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8.2 2.6 5 6 5c2 0 3.4 1.1 6 3.6C14.6 6.1 16 5 18 5c3.4 0 5 3.2 3.5 7-2.5 4.5-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span>Healthcare</span></div>
+            <div class="dom-badge"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h18M8 4v5" stroke="currentColor" stroke-width="1.6"/></svg><span>Global Capability Centers</span></div>
+            <div class="dom-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Build-Operate-Transfer</span></div>
+            <div class="dom-badge"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.5 4 5.6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.6-4-9s1.5-6.5 4-9z" stroke="currentColor" stroke-width="1.6"/></svg><span>Bestshoring &amp; Delivery Model</span></div>
           </div>
         </div>
       </div>
@@ -457,56 +436,42 @@
       <div class="dom-acc">
         <div class="acc-item is-open">
           <button class="acc-btn" onclick="accToggle(this)" aria-expanded="true">
-            <div class="acc-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M8 9 4 12 8 15M16 9l4 3-4 3M14 6l-4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <span class="acc-label">IT Staffing</span>
+            <div class="acc-iconbox"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h18M8 4v5" stroke="currentColor" stroke-width="1.6"/></svg></div>
+            <span class="acc-label">Global Capability Centers (GCC)</span>
             <svg class="acc-chev" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="acc-body">
             <div class="acc-inner">
-              <p>Developers, QA, DevOps, and cloud engineers matched on context, not keywords, including Guidewire Center of Excellence expertise for insurance-platform programs.</p>
-              <a href="/talent/services/it-staffing">Explore IT Staffing →</a>
+              <p>Strategic offshore capability, built and governed as your own extended team. We source, staff, and operate the center; you retain oversight without carrying the operational burden.</p>
+              <a href="/talent/global-workforce/global-capability-centers">Explore GCC →</a>
             </div>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-btn" onclick="accToggle(this)" aria-expanded="false">
-            <div class="acc-iconbox"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.6"/></svg></div>
-            <span class="acc-label">Non-IT Staffing</span>
+            <div class="acc-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <span class="acc-label">Build-Operate-Transfer (BOT)</span>
             <svg class="acc-chev" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="acc-body">
             <div class="acc-inner">
-              <p>Finance, operations, clinical support, and administrative talent, sourced with the same domain fluency and validation we bring to technical roles.</p>
-              <a href="/talent/services/non-it-staffing">Explore Non-IT Staffing →</a>
+              <p>We build and operate the capability at full capacity, then transfer complete control to you on your timeline, not ours, with a documented handover, not a scramble.</p>
+              <a href="/talent/global-workforce/build-operate-transfer">Explore BOT →</a>
             </div>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-btn" onclick="accToggle(this)" aria-expanded="false">
-            <div class="acc-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-            <span class="acc-label">Federal Staffing</span>
+            <div class="acc-iconbox"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.5 4 5.6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.6-4-9s1.5-6.5 4-9z" stroke="currentColor" stroke-width="1.6"/></svg></div>
+            <span class="acc-label">Bestshoring &amp; Delivery Model</span>
             <svg class="acc-chev" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="acc-body">
             <div class="acc-inner">
-              <p>Cleared, compliance-fluent talent for federal and public-sector programs, delivered against the documentation and vetting standards the mandate requires.</p>
-              <a href="/talent/services/federal-staffing">Explore Federal Staffing →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="acc-item">
-          <button class="acc-btn" onclick="accToggle(this)" aria-expanded="false">
-            <div class="acc-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8.2 2.6 5 6 5c2 0 3.4 1.1 6 3.6C14.6 6.1 16 5 18 5c3.4 0 5 3.2 3.5 7-2.5 4.5-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-            <span class="acc-label">Healthcare</span>
-            <svg class="acc-chev" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-body">
-            <div class="acc-inner">
-              <p>Healthcare staffing is delivered through the existing Pyramid Consulting Healthcare team.</p>
-              <a href="#todo-confirm-healthcare-url">See Healthcare Staffing →</a> <!-- TODO: point to the existing Pyramid Consulting Healthcare page -->
+              <p>Talent and location matched to the mandate itself: cost, skill density, time zone, and compliance, not a default geography chosen because it's where the last program landed.</p>
+              <a href="/talent/global-workforce/bestshoring">Explore Bestshoring →</a>
             </div>
           </div>
         </div>
@@ -521,29 +486,29 @@
 <section class="block" id="evolution" style="background:var(--surface)">
   <div class="pw">
     <div class="sec-head sec-head--center" style="max-width:72ch;margin-left:auto;margin-right:auto;text-align:center">
-      <div class="eyebrow">Evolving the Talent Pillar</div>
-      <h2>Everything about how we staff is evolving. <span class="accent">The accountability underneath it isn't.</span></h2>
-      <p>Talent Services engineers Pyramid's Talent Capital: skills-first, context-matched sourcing, not keyword matching. What's changed is how we build that talent bench. What hasn't is who answers for it.</p>
+      <div class="eyebrow">Evolving the Trust Pillar</div>
+      <h2>Global delivery is evolving. <span class="accent">The governance underneath it isn't.</span></h2>
+      <p>Global Workforce Solutions orchestrates Pyramid's Trust Capital at the scale of an entire delivery center: governance, security, and one accountable owner, applied everywhere the mandate lives.</p>
     </div>
     <div class="evo-grid">
       <div class="evo-col evo-then">
         <div class="evo-label">Carried Forward</div>
-        <h3>What thirty years of staffing discipline already proved.</h3>
+        <h3>What thirty years of delivery discipline already proved.</h3>
         <ul>
-          <li><b>Domain specialists, not generalists.</b> Fluent inside IT, Federal, and Healthcare, not learning the domain on your requisition.</li>
-          <li><b>One accountable owner, every engagement.</b> Executive-accessible, named from day one.</li>
-          <li><b>SLA-backed timelines and remediation.</b> Documented commitments, not implied ones.</li>
-          <li><b>Retention-first matching.</b> Built to reduce re-hiring, not just fill a requisition fast.</li>
+          <li><b>Named ownership at every site.</b> Executive-accessible, not diffused across a regional team.</li>
+          <li><b>Compliance-first site selection.</b> Location chosen for the mandate's requirements, not convenience.</li>
+          <li><b>SLA-backed transitions.</b> Documented handover milestones for every Build-Operate-Transfer engagement.</li>
+          <li><b>Relationships that outlast a single build.</b> Delivery centers that stay staffed and governed long after go-live.</li>
         </ul>
       </div>
       <div class="evo-col evo-now">
         <div class="evo-label">Newly Engineered</div>
         <h3>What's actually new about how we deliver it.</h3>
         <ul>
-          <li><b>Hoonr&trade; orchestration.</b> Sourcing that reads role context, not just keywords, and tightens with every placement.</li>
-          <li><b>Teams as a Service.</b> Full, pre-validated delivery pods, sourced and staffed as a unit, not one hire at a time.</li>
-          <li><b>AI Builders access.</b> An invitation-grade pipeline into frontier AI and engineering talent.</li>
-          <li><b>Five engagement models, one bench.</b> Flex the model to the mandate without re-sourcing from scratch.</li>
+          <li><b>Hoonr&trade;-assisted site and talent matching.</b> Context-matched staffing at every delivery center, not just headquarters hires.</li>
+          <li><b>Product-grade BOT playbooks.</b> A documented transfer process, engineered once and repeated, not improvised per engagement.</li>
+          <li><b>AI Builders access, extended globally.</b> Frontier AI and engineering talent available at every site we operate.</li>
+          <li><b>Governance dashboards.</b> Live visibility into delivery-center performance, not a quarterly report.</li>
         </ul>
       </div>
     </div>
@@ -552,118 +517,107 @@
 </section>
 
 <!-- ============================================================
-     4. ENGAGEMENT MODELS
+     4. WHY MANAGED GLOBAL DELIVERY
      ============================================================ -->
-<section class="block" id="engagement-models" style="background:var(--surface)">
+<section class="block" id="why-managed">
   <div class="pw">
     <div class="sec-head">
-      <div class="eyebrow">Engagement Models</div>
-      <h2>Flex the model to the mandate, not the other way around.</h2>
-      <p>Pyramid doesn't stop at individual placements. From a full delivery pod to a single specialist, five ways to deploy the same validated bench, chosen by how fast you need to move and how much control you want to retain.</p>
+      <div class="eyebrow">Why Managed Delivery</div>
+      <h2>What changes when governance is built in, not bolted on.</h2>
+      <p>The differences that show up when a delivery center is architected from day one, instead of assembled ad hoc.</p>
     </div>
     <div class="eng-cards">
       <div class="eng-card">
-        <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 20c0-3 2.5-5 5-5s5 2 5 5M12 20c0-3 2.5-5 5-5s5 2 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div class="tag">Full Pods</div>
-        <h3>Teams as a Service</h3>
-        <p>Full, pre-validated delivery pods, sourced and staffed by us as a single unit, not one hire at a time.</p>
-        <a class="link" href="/talent/services/teams-as-a-service">Learn more →</a>
+        <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="tag">Governance-First</div>
+        <h3>Built for oversight, not just output</h3>
+        <p>Reporting, compliance, and security are designed into the center from day one, not retrofitted after a scale-up.</p>
       </div>
       <div class="eng-card">
         <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
-        <div class="tag">Speed</div>
-        <h3>Staff Augmentation</h3>
-        <p>Precision skills added fast, without the recruiting burden landing on you.</p>
-        <a class="link" href="/talent/services/staff-augmentation">Learn more →</a>
+        <div class="tag">Named Ownership</div>
+        <h3>One accountable owner, every site</h3>
+        <p>Executive-accessible accountability at each delivery center, not a rotating point of contact.</p>
+      </div>
+      <div class="eng-card">
+        <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="tag">Compliance by Design</div>
+        <h3>Location matched to the mandate</h3>
+        <p>Sites chosen for the compliance and talent requirements the program actually has, not a default region.</p>
       </div>
       <div class="eng-card">
         <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="tag">Flexibility</div>
-        <h3>Contract-to-Hire</h3>
-        <p>Prove the fit on the job before converting to a permanent placement.</p>
-        <a class="link" href="/talent/services/contract-to-hire">Learn more →</a>
-      </div>
-      <div class="eng-card">
-        <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 15 9l7 .6-5.3 4.6L18.2 21 12 17l-6.2 4 1.5-6.8L2 9.6 9 9z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
-        <div class="tag">Permanence</div>
-        <h3>Direct Hire</h3>
-        <p>Domain-calibrated search and validation, built for retention, not just a fast close.</p>
-        <a class="link" href="/talent/services/direct-hire">Learn more →</a>
-      </div>
-      <div class="eng-card">
-        <div class="eng-iconbox"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18M12 3c2.5 2.5 4 5.6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.6-4-9s1.5-6.5 4-9z" stroke="currentColor" stroke-width="1.5"/></svg></div>
-        <div class="tag">Global Reach</div>
-        <h3>Payrolling (EOR)</h3>
-        <p>Compliant employment of record in markets where you don't have an entity yet.</p>
-        <a class="link" href="/talent/services/payrolling-eor">Learn more →</a>
+        <div class="tag">Transparent Transition</div>
+        <h3>A documented path to full control</h3>
+        <p>Every Build-Operate-Transfer engagement runs against milestones you can see, not a handover that arrives as a surprise.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     5. GLOBAL WORKFORCE SOLUTIONS TEASER
+     5. TALENT SERVICES TEASER
      ============================================================ -->
-<section class="block" id="global-workforce-teaser">
+<section class="block" id="talent-teaser" style="background:var(--surface)">
   <div class="pw">
     <div class="sec-head">
-      <div class="eyebrow">Global Workforce Solutions</div>
-      <h2>Need scale, not just headcount? We architect for that too.</h2>
-      <p>When a single hire isn't the answer, Pyramid stands up entire delivery capability: offshore, transitional, or blended, engineered to the mandate.</p>
+      <div class="eyebrow">Talent Services</div>
+      <h2>Need the talent itself, not just the delivery center?</h2>
+      <p>Global Workforce Solutions stands up the capability. Talent Services staffs it, and everything in between, across the domains enterprises actually operate in.</p>
     </div>
     <div class="gws-grid">
       <div class="gws-card gws-g1">
-        <h4>Global Capability Centers (GCC)</h4>
-        <p>Strategic offshore capability, built and governed as your own extended team.</p>
+        <h4>IT &amp; Technical Staffing</h4>
+        <p>Developers, QA, DevOps, and cloud engineers matched on context, not keywords.</p>
         <span class="go">Learn more →</span>
       </div>
       <div class="gws-card gws-g2">
-        <h4>Build-Operate-Transfer (BOT)</h4>
-        <p>We build and operate the capability, then transfer full control to you on your timeline.</p>
+        <h4>Teams as a Service</h4>
+        <p>Full, pre-validated delivery pods, sourced and staffed by us as a single unit.</p>
         <span class="go">Learn more →</span>
       </div>
       <div class="gws-card gws-g3">
-        <h4>Bestshoring &amp; Delivery Model</h4>
-        <p>Talent and location matched to the mandate, not a default geography.</p>
+        <h4>Federal &amp; Non-IT Staffing</h4>
+        <p>Cleared, compliance-fluent talent across public-sector and business-operations roles.</p>
         <span class="go">Learn more →</span>
       </div>
     </div>
-    <div class="gws-more"><a class="link" href="/talent/global-workforce">See Global Workforce Solutions →</a></div>
+    <div class="gws-more"><a class="link" href="/talent/services">See Talent Services →</a></div>
   </div>
 </section>
 
 <!-- ============================================================
-     6. DOMAIN & COMPLIANCE BADGE STRIP
+     6. TRUST & LOCATIONS BADGE STRIP
      ============================================================ -->
 <section class="badges-sec">
   <div class="pw">
-    <h3>Built for the domains and compliance standards enterprises already <span class="grad-text">trust.</span></h3>
+    <h3>Delivered against the governance standards enterprises already <span class="grad-text">trust.</span></h3>
   </div>
   <div class="badge-track">
     <div class="badge-scroll">
-      <span class="badge-pill">IT Staffing</span>
-      <span class="badge-pill">Non-IT Staffing</span>
-      <span class="badge-pill">Federal Staffing</span>
-      <span class="badge-pill">Healthcare</span>
-      <span class="badge-pill">Guidewire Center of Excellence</span>
+      <span class="badge-pill">Global Capability Centers</span>
+      <span class="badge-pill">Build-Operate-Transfer</span>
+      <span class="badge-pill">Bestshoring &amp; Delivery Model</span>
+      <span class="badge-pill">Atlanta</span>
+      <span class="badge-pill">New York</span>
+      <span class="badge-pill">Mexico City</span>
+      <span class="badge-pill">Hyderabad</span>
       <span class="badge-pill">Federal Compliance-Ready</span>
-      <span class="badge-pill">Staff Augmentation</span>
-      <span class="badge-pill">Contract-to-Hire</span>
-      <span class="badge-pill">Direct Hire</span>
-      <span class="badge-pill">Payrolling / EOR</span>
-      <span class="badge-pill">Teams as a Service</span>
+      <span class="badge-pill">Guidewire Center of Excellence</span>
+      <span class="badge-pill">Named Owner, Every Site</span>
+      <span class="badge-pill">AI Builders Validated</span>
       <!-- duplicate for seamless loop -->
-      <span class="badge-pill" aria-hidden="true">IT Staffing</span>
-      <span class="badge-pill" aria-hidden="true">Non-IT Staffing</span>
-      <span class="badge-pill" aria-hidden="true">Federal Staffing</span>
-      <span class="badge-pill" aria-hidden="true">Healthcare</span>
-      <span class="badge-pill" aria-hidden="true">Guidewire Center of Excellence</span>
+      <span class="badge-pill" aria-hidden="true">Global Capability Centers</span>
+      <span class="badge-pill" aria-hidden="true">Build-Operate-Transfer</span>
+      <span class="badge-pill" aria-hidden="true">Bestshoring &amp; Delivery Model</span>
+      <span class="badge-pill" aria-hidden="true">Atlanta</span>
+      <span class="badge-pill" aria-hidden="true">New York</span>
+      <span class="badge-pill" aria-hidden="true">Mexico City</span>
+      <span class="badge-pill" aria-hidden="true">Hyderabad</span>
       <span class="badge-pill" aria-hidden="true">Federal Compliance-Ready</span>
-      <span class="badge-pill" aria-hidden="true">Staff Augmentation</span>
-      <span class="badge-pill" aria-hidden="true">Contract-to-Hire</span>
-      <span class="badge-pill" aria-hidden="true">Direct Hire</span>
-      <span class="badge-pill" aria-hidden="true">Payrolling / EOR</span>
-      <span class="badge-pill" aria-hidden="true">Teams as a Service</span>
+      <span class="badge-pill" aria-hidden="true">Guidewire Center of Excellence</span>
+      <span class="badge-pill" aria-hidden="true">Named Owner, Every Site</span>
+      <span class="badge-pill" aria-hidden="true">AI Builders Validated</span>
     </div>
   </div>
 </section>
@@ -676,31 +630,31 @@
     <div class="outc-grid">
       <div class="outc-head">
         <div class="eyebrow">Why Choose Us</div>
-        <h2>What one accountable specialist and a validated bench actually change.</h2>
-        <p>Built for technology and operations leaders (CIO, CTO, COO) who need speed without losing domain fluency, for finance and procurement teams tracking total cost of ownership, and for people leaders accountable for retention once the placement lands.</p>
+        <h2>What a named owner and a documented model actually change.</h2>
+        <p>Built for technology and operations leaders (CIO, CTO, COO) scaling delivery capacity, for finance and procurement teams modeling the total cost of a center, and for people leaders accountable for the team once it's live.</p>
       </div>
       <div class="outc-card outc-1" data-stat-card>
         <div class="outc-num"><span class="stat-num" data-target="1">0</span></div>
-        <p>One accountable specialist, named on every engagement, start to finish.</p>
+        <p>Named owner, accountable for every delivery center, start to finish.</p>
         <div class="outc-arrow"><svg viewBox="0 0 18 18" fill="none"><path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
       <div class="outc-card outc-2" data-stat-card>
-        <div class="outc-num"><span class="stat-num" data-target="5">0</span></div>
-        <p>Engagement models, one validated bench underneath every one.</p>
+        <div class="outc-num"><span class="stat-num" data-target="3">0</span></div>
+        <p>Delivery models, one governance framework underneath every one.</p>
         <div class="outc-arrow"><svg viewBox="0 0 18 18" fill="none"><path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
       <div class="outc-card outc-3" data-stat-card>
         <div class="outc-num"><span class="stat-num" data-target="100" data-suffix="%">0%</span></div>
-        <p>Candidates cleared through Hoonr™ validation before they reach you.</p>
+        <p>Compliance-first site selection, documented before staffing begins.</p>
         <div class="outc-arrow"><svg viewBox="0 0 18 18" fill="none"><path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="#0D1127" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
       <div class="outc-card outc-4" data-stat-card>
-        <div class="outc-num"><span class="stat-num" data-target="90" data-suffix="%+">0%</span></div>
-        <p>90-day retention on precision-matched placements, above industry benchmark.</p>
+        <div class="outc-num"><span class="stat-num" data-target="30">0</span></div>
+        <p>Years of delivery discipline behind every Build-Operate-Transfer engagement.</p>
         <div class="outc-arrow"><svg viewBox="0 0 18 18" fill="none"><path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
     </div>
-    <p class="outc-foot">Figures reflect current staffing-industry benchmarks for skills-first, domain-matched delivery, shown as directional ranges. To be replaced with Pyramid Talent's own verified engagement data and named sources before publish.</p>
+    <p class="outc-foot">Figures reflect Pyramid's own delivery-model structure and operating history, not third-party benchmarks. Engagement-level performance data to be added as named case studies are approved for publish.</p>
   </div>
 </section>
 
@@ -716,20 +670,20 @@
     <div class="test-card" style="position:relative">
       <span class="test-sample">Sample quote: pending a named client testimonial</span>
       <div class="test-left">
-        <p class="test-quote">"We needed a partner who could staff across IT and Federal without losing the domain fluency on either side. Pyramid put a named owner on the engagement from week one, and the bench held up through every phase of the program."</p>
+        <p class="test-quote">"We wanted an offshore center without losing oversight of it. Pyramid built and operated it against a documented plan, and the Build-Operate-Transfer handover happened exactly on the timeline we'd agreed to, not months later."</p>
         <div class="test-author">
           <div class="test-avatar">VP</div>
           <div>
-            <div class="test-author-name">VP, Technology Delivery</div>
-            <div class="test-author-role">Illustrative example, enterprise IT &amp; Federal program</div>
+            <div class="test-author-name">VP, Global Operations</div>
+            <div class="test-author-role">Illustrative example, enterprise GCC-to-BOT engagement</div>
           </div>
         </div>
       </div>
       <div class="test-right">
         <div class="test-res-label">Illustrative Engagement Metrics</div>
-        <div class="test-res-item"><div class="test-dot"></div><span class="test-res-text">Faster time-to-shortlist across both domains</span></div>
-        <div class="test-res-item"><div class="test-dot"></div><span class="test-res-text">Single accountable lead throughout the engagement</span></div>
-        <div class="test-res-item" style="margin-bottom:0"><div class="test-dot"></div><span class="test-res-text">90-day retention above industry benchmark</span></div>
+        <div class="test-res-item"><div class="test-dot"></div><span class="test-res-text">Full transfer completed on the agreed timeline</span></div>
+        <div class="test-res-item"><div class="test-dot"></div><span class="test-res-text">Single accountable lead throughout the build</span></div>
+        <div class="test-res-item" style="margin-bottom:0"><div class="test-dot"></div><span class="test-res-text">Zero compliance findings at handover</span></div>
       </div>
     </div>
   </div>
@@ -744,10 +698,10 @@
       <h2>Continue exploring Pyramid Talent.</h2>
     </div>
     <div class="expl-links">
-      <a class="expl-row" href="/talent/global-workforce">
+      <a class="expl-row" href="/talent/services">
         <span class="expl-left">
-          <span class="expl-label">Workforce</span>
-          <span class="expl-text">Global Workforce Solutions</span>
+          <span class="expl-label">Talent</span>
+          <span class="expl-text">Talent Services</span>
         </span>
         <span class="expl-arrow"><svg viewBox="0 0 18 18" fill="none"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
@@ -761,7 +715,7 @@
       <a class="expl-row" href="/talent/contact-us">
         <span class="expl-left">
           <span class="expl-label">Connect</span>
-          <span class="expl-text">Talk to a Talent Strategist</span>
+          <span class="expl-text">Talk to a Workforce Strategist</span>
         </span>
         <span class="expl-arrow"><svg viewBox="0 0 18 18" fill="none"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
@@ -777,39 +731,39 @@
     <div class="ins-head-row">
       <div class="sec-head">
         <div class="eyebrow">Insights</div>
-        <h2>Thinking on specialized talent and engagement design.</h2>
+        <h2>Thinking on global delivery and governed scale.</h2>
       </div>
       <a class="ins-all" href="#">All insights →</a>
     </div>
     <div class="ins-grid">
       <div class="ins-card">
-        <div class="ins-img g1" style="background:radial-gradient(85% 70% at 50% 74%, rgba(168,85,247,.7) 0%, rgba(109,40,217,.28) 48%, rgba(88,28,135,0) 72%),linear-gradient(155deg,#4a1288 0%,#340a61 52%,#210a40 100%)">
-          <span class="ins-tag">Talent</span>
-        </div>
-        <div class="ins-body">
-          <h4 class="ins-title">Skills-first hiring: why credentials stopped predicting performance</h4>
-          <p class="ins-desc">What context-matching catches that keyword search doesn't.</p>
-          <div class="ins-foot"><span>5 min read</span><a class="ins-read" href="#">Read →</a></div>
-        </div>
-      </div>
-      <div class="ins-card">
-        <div class="ins-img" style="background:linear-gradient(120deg,transparent 42%,rgba(230,210,255,.14) 50%,transparent 60%),radial-gradient(92% 72% at 52% 58%, rgba(196,181,253,.55) 0%, rgba(139,111,224,.3) 52%, rgba(88,28,135,0) 76%),linear-gradient(150deg,#6d2a8f 0%,#3f1560 56%,#210a40 100%)">
+        <div class="ins-img" style="background:radial-gradient(85% 70% at 50% 74%, rgba(168,85,247,.7) 0%, rgba(109,40,217,.28) 48%, rgba(88,28,135,0) 72%),linear-gradient(155deg,#4a1288 0%,#340a61 52%,#210a40 100%)">
           <span class="ins-tag">Trust</span>
-        </div>
-        <div class="ins-body">
-          <h4 class="ins-title">One owner, zero handoffs: the SLA commitment enterprises actually need</h4>
-          <p class="ins-desc">Why diffused accountability is the most common program failure mode.</p>
-          <div class="ins-foot"><span>4 min read</span><a class="ins-read" href="#">Read →</a></div>
-        </div>
-      </div>
-      <div class="ins-card">
-        <div class="ins-img" style="background:radial-gradient(90% 72% at 30% 24%, rgba(124,58,237,.55) 0%, transparent 58%),linear-gradient(160deg,#1C1145 0%,#0D1127 100%)">
-          <span class="ins-tag">Global Workforce</span>
         </div>
         <div class="ins-body">
           <h4 class="ins-title">GCC &amp; BOT: capability centers built on governance, not just delivery</h4>
           <p class="ins-desc">What separates a durable offshore build from a headcount arbitrage play.</p>
           <div class="ins-foot"><span>6 min read</span><a class="ins-read" href="#">Read →</a></div>
+        </div>
+      </div>
+      <div class="ins-card">
+        <div class="ins-img" style="background:linear-gradient(120deg,transparent 42%,rgba(230,210,255,.14) 50%,transparent 60%),radial-gradient(92% 72% at 52% 58%, rgba(196,181,253,.55) 0%, rgba(139,111,224,.3) 52%, rgba(88,28,135,0) 76%),linear-gradient(150deg,#6d2a8f 0%,#3f1560 56%,#210a40 100%)">
+          <span class="ins-tag">Talent</span>
+        </div>
+        <div class="ins-body">
+          <h4 class="ins-title">Bestshoring 2026: right talent, right location, right cost structure</h4>
+          <p class="ins-desc">Why location-first offshore strategy is losing to mandate-first delivery design.</p>
+          <div class="ins-foot"><span>5 min read</span><a class="ins-read" href="#">Read →</a></div>
+        </div>
+      </div>
+      <div class="ins-card">
+        <div class="ins-img" style="background:radial-gradient(90% 72% at 30% 24%, rgba(124,58,237,.55) 0%, transparent 58%),linear-gradient(160deg,#1C1145 0%,#0D1127 100%)">
+          <span class="ins-tag">Experience</span>
+        </div>
+        <div class="ins-body">
+          <h4 class="ins-title">The Build-Operate-Transfer handover: what a documented plan actually prevents</h4>
+          <p class="ins-desc">The failure modes a milestone-based transfer plan is designed to close off.</p>
+          <div class="ins-foot"><span>4 min read</span><a class="ins-read" href="#">Read →</a></div>
         </div>
       </div>
     </div>
@@ -825,51 +779,51 @@
       <div class="faqx-intro">
         <div class="eyebrow">FAQ</div>
         <h2>Questions enterprise leaders ask before engaging.</h2>
-        <p>Covering domains, engagement models, and timelines: the questions that matter before a mandate gets staffed.</p>
-        <a class="link" href="/talent/contact-us">Talk to a Talent Strategist →</a>
+        <p>Covering delivery models, governance, and timelines: the questions that matter before a center gets built.</p>
+        <a class="link" href="/talent/contact-us">Talk to a Workforce Strategist →</a>
       </div>
       <div class="faqx-items">
         <div class="faqx-item">
           <button class="faqx-trigger" onclick="faqxToggle(this)" aria-expanded="false">
-            <span class="faqx-q">What's the difference between Staff Augmentation and Teams as a Service?</span>
+            <span class="faqx-q">What's the difference between a GCC and a Build-Operate-Transfer engagement?</span>
             <svg class="faqx-arrow" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faqx-body"><p>Staff Augmentation adds individual specialists into your existing team and structure. Teams as a Service deploys a full, pre-validated delivery pod that we source, staff, and coordinate as a unit, so you're not assembling the team yourself.</p></div>
+          <div class="faqx-body"><p>A GCC is built and governed as your own extended team on an ongoing basis. BOT follows the same build, but with a documented plan to transfer full operational control to you once the center is established.</p></div>
         </div>
         <div class="faqx-item">
           <button class="faqx-trigger" onclick="faqxToggle(this)" aria-expanded="false">
-            <span class="faqx-q">How fast can Pyramid staff a role once we submit a requisition?</span>
+            <span class="faqx-q">How is Bestshoring different from traditional offshoring?</span>
             <svg class="faqx-arrow" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faqx-body"><p>Timelines vary by domain and clearance requirements, but Hoonr™-assisted sourcing compresses time-to-shortlist versus traditional keyword search. A workforce strategist scopes your specific timeline during the intake call.</p></div>
+          <div class="faqx-body"><p>Traditional offshoring starts with a region and fits the mandate to it. Bestshoring starts with the mandate, then matches talent density, cost structure, time zone, and compliance requirements to the location that actually fits.</p></div>
         </div>
         <div class="faqx-item">
           <button class="faqx-trigger" onclick="faqxToggle(this)" aria-expanded="false">
-            <span class="faqx-q">Do you staff across IT, Non-IT, Federal, and Healthcare with the same bench?</span>
+            <span class="faqx-q">How long does a Build-Operate-Transfer handover take?</span>
             <svg class="faqx-arrow" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faqx-body"><p>Each domain is staffed by specialists fluent in that domain specifically. Healthcare staffing runs through the existing Pyramid Consulting Healthcare team; IT, Non-IT, and Federal are staffed directly by Pyramid Talent.</p></div>
+          <div class="faqx-body"><p>Timelines are scoped to the size and complexity of the center during the intake call and documented as milestones up front, so the transfer date is a commitment, not an estimate that slips.</p></div>
         </div>
         <div class="faqx-item">
           <button class="faqx-trigger" onclick="faqxToggle(this)" aria-expanded="false">
-            <span class="faqx-q">What happens if a placement isn't the right fit?</span>
+            <span class="faqx-q">Who owns compliance and security during the build?</span>
             <svg class="faqx-arrow" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faqx-body"><p>Remediation is SLA-backed and documented up front, not implied. If the fit isn't right, the specialist accountable for your engagement drives the resolution rather than leaving you to re-open the requisition on your own.</p></div>
+          <div class="faqx-body"><p>Pyramid owns compliance and security design during the build and operate phases, documented against the standards your program requires, with full visibility into governance rather than a black-box operation.</p></div>
         </div>
         <div class="faqx-item">
           <button class="faqx-trigger" onclick="faqxToggle(this)" aria-expanded="false">
-            <span class="faqx-q">Can we move between engagement models mid-program without re-sourcing?</span>
+            <span class="faqx-q">Can we start with a GCC and move to Build-Operate-Transfer later?</span>
             <svg class="faqx-arrow" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faqx-body"><p>Yes. All five engagement models draw from the same validated bench, so shifting from staff augmentation to direct hire, or adding payrolling for a new market, doesn't mean starting the search over.</p></div>
+          <div class="faqx-body"><p>Yes. Every delivery model draws on the same governance framework, so moving from an ongoing GCC into a documented transfer plan doesn't mean rebuilding the center from scratch.</p></div>
         </div>
         <div class="faqx-item">
           <button class="faqx-trigger" onclick="faqxToggle(this)" aria-expanded="false">
-            <span class="faqx-q">How does Pyramid handle federal clearance and compliance requirements?</span>
+            <span class="faqx-q">Does Global Workforce Solutions staff the roles too, or just the center?</span>
             <svg class="faqx-arrow" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faqx-body"><p>Federal Staffing specialists source and validate against the clearance level and documentation standard your program requires, so candidates arrive compliance-ready rather than needing rework after submission.</p></div>
+          <div class="faqx-body"><p>Both. We architect and govern the delivery center, and Talent Services staffs it, across IT, Non-IT, Federal, and Healthcare, so you're not coordinating two separate vendors.</p></div>
         </div>
       </div>
     </div>
@@ -883,8 +837,8 @@
   <div class="pw">
     <div class="ctab-inner">
       <svg width="42" height="30" viewBox="0 0 30 22" aria-hidden="true"><path d="M15 2 4 15M15 2 28 20" stroke="#C29B5D" stroke-width="3.2" stroke-linecap="round" fill="none"/></svg>
-      <h2>Most engagements start with a conversation about the mandate, not the résumé.</h2>
-      <a class="btn btn-dark" href="/talent/contact-us">Talk to a Talent Strategist →</a>
+      <h2>Most delivery-center conversations start with the mandate, not the map.</h2>
+      <a class="btn btn-dark" href="/talent/contact-us">Talk to a Workforce Strategist →</a>
     </div>
   </div>
 </section>
@@ -900,10 +854,10 @@
         Pyramid Talent
       </div>
       <div class="foot-links">
-        <a href="#domains">Staffing by Domain</a>
+        <a href="#delivery-models">Delivery Models</a>
         <a href="#evolution">Evolution</a>
-        <a href="#engagement-models">Engagement Models</a>
-        <a href="#global-workforce-teaser">Global Workforce</a>
+        <a href="#why-managed">Why Managed Delivery</a>
+        <a href="#talent-teaser">Talent Services</a>
         <a href="#why-choose-us">Why Choose Us</a>
         <a href="#faq">FAQ</a>
         <a href="#talk-to-experts">Talk to Our Experts</a>
@@ -920,7 +874,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-  /* ── Staffing-by-Domain accordion (single-open, GSAP height tween) ── */
+  /* ── Delivery Models accordion (single-open, GSAP height tween) ── */
   function accToggle(btn){
     var item=btn.parentElement, body=item.querySelector('.acc-body');
     var isOpen=btn.getAttribute('aria-expanded')==='true';
@@ -953,7 +907,7 @@
       }
     }
   }
-  /* open the first domain row by default (matches aria-expanded="true" above) */
+  /* open the first row by default (matches aria-expanded="true" above) */
   document.addEventListener('DOMContentLoaded',function(){
     var first=document.querySelector('.acc-item.is-open .acc-body');
     if(first){ if(window.gsap){ gsap.set(first,{height:'auto'}); } else { first.style.height='auto'; } }
@@ -1025,8 +979,8 @@
         }},i*0.12+0.1);
     });
 
-    /* fade-in section headers on scroll */
-    gsap.utils.toArray('.sec-head').forEach(function(el){
+    var revealTargets=gsap.utils.toArray('.sec-head');
+    revealTargets.forEach(function(el){
       gsap.from(el,{y:24,opacity:0,duration:.7,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});
     });
 
@@ -1044,7 +998,7 @@
        must never stay permanently invisible. Anything this system
        hid that is still hidden a few seconds in gets force-shown. */
     setTimeout(function(){
-      document.querySelectorAll('.sec-head,[data-stat-card]').forEach(function(el){
+      document.querySelectorAll('.sec-head').forEach(function(el){
         if(getComputedStyle(el).opacity==='0'){
           gsap.killTweensOf(el);
           gsap.set(el,{clearProps:'all'});
